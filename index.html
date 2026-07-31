@@ -21,11 +21,11 @@
       <span class="brand-name">SIGNATURE D</span>
     </a>
 
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-navigation">
       <span></span><span></span>
     </button>
 
-    <nav class="site-nav" aria-label="Main navigation">
+    <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
@@ -231,34 +231,36 @@
           want it to feel. We will reply with availability and direction.
         </p>
         <div class="contact-details">
-          <a href="mailto: narinedevirn@gmail.com">narinedevirn@gmail.com</a>
+          <a href="mailto:narinedevirn@gmail.com">narinedevirn@gmail.com</a>
           <span>Florida · Available for travel</span>
         </div>
       </div>
 
       <form class="inquiry-form" action="https://formsubmit.co/narinedevirn@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New Signature D website inquiry">
+        <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
         <label>
           Your name
-          <input type="text" name="name" required placeholder="Full name">
+          <input type="text" name="name" required autocomplete="name" placeholder="Full name">
         </label>
 
         <label>
           Email address
-          <input type="email" name="email" required placeholder="you@email.com">
+          <input type="email" name="email" required autocomplete="email" placeholder="you@email.com">
         </label>
 
         <label>
           What are you interested in?
           <select name="service" required>
             <option value="">Choose a service</option>
-            <option>Photography</option>
-            <option>Film & Motion</option>
-            <option>Brand Identity</option>
-            <option>The Signature Code</option>
-            <option>Something custom</option>
+            <option value="Photography">Photography</option>
+            <option value="Film & Motion">Film &amp; Motion</option>
+            <option value="Brand Identity">Brand Identity</option>
+            <option value="The Signature Code">The Signature Code</option>
+            <option value="Something custom">Something custom</option>
           </select>
         </label>
 
